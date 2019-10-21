@@ -1,0 +1,53 @@
+{
+  "webProjects": [
+    {
+      "heading": "Codigo Content Editor Web App",
+      "description": "I designed the User Interface for this browser-based digital signage creation tool. The challenge was making it usable for both professional and amateur designers.",
+      "imgFileName": "codigo-ce-crop.jpg",
+      "imgAlt": "codigo content editor",
+      "linkURL": "https://medium.com/@davidysoards/designing-a-ui-for-designers-and-non-designers-f23d277d2cc9",
+      "linkText": "Read the Full Story"
+    },
+    {
+      "heading": "Duck Duck Beet Farm &amp; Kitchen",
+      "description": "I was asked to create an e-commerce website for this unique business that delivers farm fresh meals directly to your door. My favorite part of this project was creating the custom illustrations and icons.",
+      "imgFileName": "duckduckbeet-crop.jpg",
+      "imgAlt": "duck duck beet homepage",
+      "linkURL": "https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4",
+      "linkText": "Read the Full Story"
+    },
+    {
+      "heading": "Comic Creator Mobile App",
+      "description": "I designed this app for sequential artists as part of my final project for the 10-week Springboard UX Design Course. I received a score of “Exceeding Expectations” in all categories from an independant industry expert.",
+      "imgFileName": "comic-creator-mockup.jpg",
+      "imgAlt": "comic creator app mockups",
+      "linkURL": "https://blog.prototypr.io/designing-the-comic-creator-mobile-app-27b39ac74099",
+      "linkText": "Read the Full Story"
+    },
+    {
+      "heading": "May Fine Woodworking",
+      "description": "This project started out as a website makeover but turned into a full rebranding with a new logo, photography and promotional print materials.",
+      "imgFileName": "mfw-home-thumb.jpg",
+      "imgAlt": "may fine woodworking homepage",
+      "linkURL": "may-fine-woodworking",
+      "linkText": "Read the Full Story",
+      "nuxtLink": true
+    },
+    {
+      "heading": "Paint It Sweet",
+      "description": "During this project for a mobile art studio, I designed and developed the website, illustrated custom icons to explain the business to new customers, and reworked her logo using improved typography.",
+      "imgFileName": "paint-it-sweet-crop.jpg",
+      "imgAlt": "paint it sweet homepage",
+      "linkURL": "https://paint-it-sweet.com/",
+      "linkText": "Visit the Site"
+    },
+    {
+      "heading": "First Light Gallery",
+      "description": "I was asked to create a new website for an art gallery dedicated to photography. In order to best showcase the imagery, I placed full-screen images at the top of pages and used a muted color palette throughout the site. I also got to animate the First Light logo.",
+      "imgFileName": "flg-home-crop.jpg",
+      "imgAlt": "first light gallery homepage",
+      "linkURL": "http://firstlightgalleryky.com/",
+      "linkText": "Visit the Site"
+    }
+  ]
+}
