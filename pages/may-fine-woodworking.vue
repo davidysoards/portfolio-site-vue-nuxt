@@ -1,6 +1,5 @@
 <template>
   <div class="portfolio-page">
-    <the-header />
     <section class="hero-projects">
       <div class="wrapper">
         <div>
@@ -199,20 +198,15 @@
         </a>
       </div>
     </main>
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue';
-import TheFooter from '~/components/TheFooter.vue';
 import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
 
 export default {
   name: 'MayFineWoodworking',
   components: {
-    TheHeader,
-    TheFooter,
     ArrowDoubleDown,
   },
 };

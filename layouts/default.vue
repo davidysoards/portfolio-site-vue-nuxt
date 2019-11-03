@@ -1,12 +1,28 @@
 <template>
   <div>
+    <!-- <the-sticky-nav /> -->
+    <the-header />
     <nuxt />
+    <the-footer />
   </div>
 </template>
 
-<style lang="scss">
-@import '~assets/scss/variables';
+<script>
+import TheHeader from '~/components/TheHeader.vue';
+// import TheStickyNav from '~/components/TheStickyNav.vue';
+import TheFooter from '~/components/TheFooter.vue';
 
+export default {
+  name: 'Home',
+  components: {
+    TheHeader,
+    TheFooter,
+    // TheStickyNav,
+  },
+};
+</script>
+
+<style lang="scss">
 body {
   display: flex;
   flex-direction: column;

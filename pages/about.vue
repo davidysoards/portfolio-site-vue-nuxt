@@ -1,6 +1,5 @@
 <template>
   <div class="portfolio-page">
-    <the-header />
     <section class="hero-about">
       <div class="wrapper">
         <div>
@@ -79,20 +78,15 @@
       </div>
       <!-- /wrapper -->
     </main>
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue';
-import TheFooter from '~/components/TheFooter.vue';
 import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
 
 export default {
   name: 'About',
   components: {
-    TheHeader,
-    TheFooter,
     ArrowDoubleDown,
   },
 };

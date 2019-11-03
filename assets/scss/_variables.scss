@@ -20,3 +20,19 @@ $albertus: 'Albertus Nova W01 Light', $sans;
 $fanfare: 'Wolpe Fanfare W01 Regular', $sans;
 $fanfare-black: 'Wolpe Fanfare W01 Black', $sans;
 $pegasus: 'Wolpe Pegasus W01 Regular', $serif;
+
+// EXTENDS
+%nav {
+  display: grid;
+  grid-gap: 2.6em;
+  grid-auto-flow: column;
+  justify-content: center;
+  a {
+    font-family: $albertus;
+    font-size: 1em;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.07);
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

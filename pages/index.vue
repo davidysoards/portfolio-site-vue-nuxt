@@ -1,10 +1,12 @@
 <template>
   <div class="home-page">
-    <the-header />
     <section class="hero-home">
       <div class="wrapper">
-        <h1 id="heading" class="animated fadeInLeftBig">
-          <span>My</span> <span>Name</span> <span>Is</span> <span>David</span>
+        <h1 id="heading">
+          <span class="animated flipInX">My</span>
+          <span class="animated flipInX delay-1">Name</span>
+          <span class="animated flipInX delay-2">Is</span>
+          <span class="animated flipInX delay-3">David</span>
         </h1>
         <!-- prettier-ignore -->
         <svg-head-balloon />
@@ -173,22 +175,17 @@
         </div>
       </section>
     </main>
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue';
-import TheFooter from '~/components/TheFooter.vue';
 import SvgHeadBalloon from '~/components/SvgHeadBalloon.vue';
 import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
 
 export default {
   name: 'Home',
   components: {
-    TheHeader,
     SvgHeadBalloon,
-    TheFooter,
     ArrowDoubleDown,
   },
 };
@@ -200,6 +197,7 @@ export default {
   background: $color-primary-light;
   min-height: 100vh;
   z-index: 75;
+
   h1 {
     @media only screen and ($small-bp) {
       font-size: 6em;
@@ -228,6 +226,12 @@ export default {
       grid-template-columns: 1fr 2fr;
     }
   }
+
+  #heading {
+    span {
+      display: inline-block;
+    }
+  }
 }
 
 .head-balloon {
@@ -246,6 +250,7 @@ export default {
   h3 {
     color: $color-text;
   }
+
   ul {
     display: grid;
     grid-gap: 1em;
@@ -274,6 +279,7 @@ export default {
   justify-items: center;
   margin-bottom: 1em;
   max-width: 400px;
+
   a {
     img {
       transition: opacity 0.2s linear;
@@ -281,6 +287,7 @@ export default {
         opacity: 0.7;
       }
     }
+
     h3 {
       transition: color 0.2s linear;
       &:hover {
@@ -295,6 +302,7 @@ export default {
   ul {
     display: grid;
     grid-gap: 1em;
+
     h3 {
       text-transform: none;
       color: $color-text;
@@ -302,6 +310,7 @@ export default {
     @media only screen and ($medium-bp) {
       grid-template-columns: repeat(3, minmax(150px, 1fr));
     }
+
     li {
       p {
         text-align: left;

@@ -1,10 +1,11 @@
 <template>
   <div class="portfolio-page">
-    <the-header />
-
     <section class="hero-portfolio">
       <div class="wrapper">
-        <h1 id="heading" class="animated fadeInLeftBig">My Work</h1>
+        <h1 id="heading">
+          <span class="animated flipInX">My</span>
+          <span class="animated flipInX delay-2">Work</span>
+        </h1>
         <img
           id="desk-illustration"
           class="animated bounceInRight slow"
@@ -1129,14 +1130,10 @@
         </a>
       </div>
     </main>
-
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue';
-import TheFooter from '~/components/TheFooter.vue';
 import CardFullWidth from '~/components/CardFullWidth.vue';
 import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
 
@@ -1145,8 +1142,6 @@ import projects from '~/assets/projects.json';
 export default {
   name: 'Portfolio',
   components: {
-    TheHeader,
-    TheFooter,
     CardFullWidth,
     ArrowDoubleDown,
   },
@@ -1231,9 +1226,11 @@ export default {
   background: $color-primary-light;
   min-height: 100vh;
   z-index: 75;
+
   img {
     box-shadow: none;
   }
+
   h1 {
     @media only screen and ($small-bp) {
       font-size: 6em;
@@ -1260,6 +1257,12 @@ export default {
     }
     @media only screen and ($small-bp) {
       grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  #heading {
+    span {
+      display: inline-block;
     }
   }
 }

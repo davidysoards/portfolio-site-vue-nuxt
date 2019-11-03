@@ -139,10 +139,10 @@ footer {
   grid-column: 1 / -1;
   background: $color-primary;
   color: white;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px;
   @media only screen and ($x-small-bp) {
     margin-bottom: 46px;
-  }
+  } */
   .wrapper {
     display: grid;
     grid-gap: 1em;
