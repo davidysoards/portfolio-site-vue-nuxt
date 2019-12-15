@@ -1,9 +1,9 @@
 <template>
-  <div class="portfolio-page">
-    <section class="hero-projects">
-      <div class="wrapper">
-        <div>
-          <h1 id="heading" class="animated fadeInLeftBig">Case Study</h1>
+  <div class="project-page">
+    <section class="hero">
+      <div class="wrapper project-hero-grid">
+        <div class="hero-heading">
+          <h1 class="animated fadeInLeftBig">Case Study</h1>
         </div>
         <img
           src="~/assets/img/may-fine-vertical-trans.png"
@@ -80,10 +80,12 @@
             href="~/assets/img/MFW-home-screenshot-FULL.jpg"
             data-lightbox="may-fine-1"
             data-title="May Fine Woodworking home page"
-            ><img
+          >
+            <img
               src="~/assets/img/mfw-home-thumb.jpg"
               alt="May Fine Woodworking home page"
-          /></a>
+            />
+          </a>
           <figcaption>
             My goal was to showcase Eric's values and his beautiful handmade
             products.
@@ -110,10 +112,12 @@
             href="~/assets/img/MFW-lewis-screenshot-FULL.jpg"
             data-lightbox="may-fine-2"
             data-title="May Fine Woodworking full project page"
-            ><img
+          >
+            <img
               src="~/assets/img/mfw-ashley-thumb.jpg"
               alt="May Fine Woodworking Ashley Kitchen page"
-          /></a>
+            />
+          </a>
           <figcaption>
             Pictures and the corresponding testimonials are showcased together
             as projects.
@@ -170,10 +174,12 @@
             href="~/assets/img/mfw-home-full-mobile.JPG"
             data-lightbox="may-fine-4"
             data-title="Full mobile screenshot"
-            ><img
+          >
+            <img
               src="~/assets/img/MFW-Ashley-mobile-screenshot.jpg"
               alt="may fine woodworking on mobile"
-          /></a>
+            />
+          </a>
           <figcaption>
             The responsive design and looks great on mobile devices too.
           </figcaption>
@@ -193,8 +199,8 @@
       <!-- /wrapper -->
 
       <div>
-        <a href="#scroll-down"
-          ><button><i class="fas fa-angle-double-up"></i> Back to Top</button>
+        <a href="#scroll-down">
+          <button><i class="fas fa-angle-double-up"></i> Back to Top</button>
         </a>
       </div>
     </main>
@@ -213,11 +219,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hero-projects {
+.hero {
   display: grid;
   background: $color-primary-light;
   min-height: 100vh;
-  z-index: 75;
   img {
     box-shadow: none;
   }
@@ -233,11 +238,7 @@ export default {
     }
   }
 
-  /* #heading {
-    visibility: hidden;
-  } */
-
-  .wrapper {
+  .project-hero-grid {
     display: grid;
     grid-gap: 1em;
     align-content: center;

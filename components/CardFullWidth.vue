@@ -1,20 +1,20 @@
 <template>
   <li class="website-full">
     <div class="thumb-container">
-      <img :src="imgSrc" :alt="project.imgAlt" />
+      <img :src="imgSrc" :alt="image.fields.description" />
     </div>
     <div class="content-container">
-      <h4>{{ project.heading }}</h4>
+      <h4>{{ heading }}</h4>
       <p>
-        {{ project.description }}
+        {{ description }}
       </p>
       <p class="read-story">
-        <nuxt-link v-if="project.nuxtLink" :to="project.linkURL">
-          {{ project.linkText }}
+        <nuxt-link v-if="isNuxtLink" :to="link">
+          {{ linkDisplay }}
           <font-awesome-icon :icon="['fas', 'angle-double-right']" />
         </nuxt-link>
-        <a v-else :href="project.linkURL" target="_blank">
-          {{ project.linkText }}
+        <a v-else :href="link" target="_blank">
+          {{ linkDisplay }}
           <font-awesome-icon :icon="['fas', 'angle-double-right']" />
         </a>
       </p>
@@ -26,14 +26,16 @@
 export default {
   name: 'CardFullWidth',
   props: {
-    project: { type: Object, default: () => {} },
-  },
-  data() {
-    return {};
+    image: { type: Object, default: () => {} },
+    heading: { type: String, default: '' },
+    description: { type: String, default: '' },
+    isNuxtLink: { type: Boolean, default: false },
+    link: { type: String, default: '' },
+    linkDisplay: { type: String, default: '' },
   },
   computed: {
     imgSrc() {
-      return require(`~/assets/img/${this.project.imgFileName}`);
+      return `https:${this.image.fields.file.url}`;
     },
   },
 };

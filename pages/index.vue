@@ -1,21 +1,19 @@
 <template>
   <div class="home-page">
-    <section class="hero-home">
-      <div class="wrapper">
-        <h1 id="heading">
-          <span class="animated flipInX">My</span>
-          <span class="animated flipInX delay-1">Name</span>
-          <span class="animated flipInX delay-2">Is</span>
-          <span class="animated flipInX delay-3">David</span>
-        </h1>
-        <!-- prettier-ignore -->
+    <section class="hero">
+      <div class="wrapper hero-grid">
+        <div class="hero-heading">
+          <h1>
+            <span class="animated flipInX">My</span>
+            <span class="animated flipInX delay-1">Name</span>
+            <span class="animated flipInX delay-2">Is</span>
+            <span class="animated flipInX delay-3">David</span>
+          </h1>
+        </div>
         <svg-head-balloon />
-
         <arrow-double-down />
       </div>
-      <!-- /wrapper -->
     </section>
-    <!-- /hero -->
 
     <main id="scroll-down" class="home">
       <section class="i-am">
@@ -188,49 +186,18 @@ export default {
     SvgHeadBalloon,
     ArrowDoubleDown,
   },
+  head() {
+    return {
+      title: `David Soards | Home`,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.hero-home {
-  display: grid;
-  background: $color-primary-light;
-  min-height: 100vh;
-  z-index: 75;
-
-  h1 {
-    @media only screen and ($small-bp) {
-      font-size: 6em;
-    }
-    @media only screen and ($medium-bp) {
-      font-size: 8em;
-    }
-    @media only screen and ($large-bp) {
-      font-size: 9.2em;
-    }
-  }
-
-  .wrapper {
-    display: grid;
-    grid-gap: 1em;
-    align-content: center;
-    align-items: center;
-    margin-top: 194px;
-    padding-top: 0;
-    padding-bottom: 5%;
-    overflow: hidden;
-    @media only screen and ($medium-bp) {
-      margin-top: 110px;
-    }
-    @media only screen and ($small-bp) {
-      grid-template-columns: 1fr 2fr;
-    }
-  }
-
-  #heading {
-    span {
-      display: inline-block;
-    }
+.hero-heading {
+  span {
+    display: inline-block;
   }
 }
 

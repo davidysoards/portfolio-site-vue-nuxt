@@ -1,9 +1,9 @@
 <template>
-  <div class="portfolio-page">
-    <section class="hero-about">
-      <div class="wrapper">
-        <div>
-          <h1 class="heading">
+  <div class="about-page">
+    <section class="hero">
+      <div class="wrapper about-hero-grid">
+        <div class="heading">
+          <h1 class="title">
             <div class="animated fadeInLeftBig">It's All</div>
             <div class="animated fadeInLeftBig delay-2">About Me</div>
           </h1>
@@ -48,7 +48,7 @@
         </p>
 
         <p>
-          I’m very interested in how the principles of animation and motion
+          I’m very interested in how the principles of animation and how motion
           design can be used to create better User Experiences on the web. I
           believe motion for UX is an area that is going to continue to grow and
           receive even more interest in the very near future. I get excited
@@ -60,11 +60,9 @@
 
         <p>
           Continuing education is extremely important to me, and I’m always
-          looking to learn more and new things. Currently I’m back in Code
-          Louisville for a 2nd cohort learning React, which I am very excited
-          about. Over the last year my understanding of vanilla JavaScript has
-          improved immensely and I’m ready to take my developer skills to the
-          next level by learning an MVC framework.
+          looking to learn more and new things. Having completed two cohorts at
+          Code Louisville myself, I’m now very happy to be giving back and
+          working as a mentor in both the Front-End and JavaScript classes.
         </p>
 
         <p>
@@ -89,56 +87,38 @@ export default {
   components: {
     ArrowDoubleDown,
   },
+  head() {
+    return {
+      title: `David Soards | About`,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.hero-about {
+.about-hero-grid {
   display: grid;
-  background: $color-primary-light;
-  min-height: 100vh;
-  z-index: 75;
-
-  h1 {
-    @media only screen and ($small-bp) {
-      font-size: 6em;
-    }
-    @media only screen and ($medium-bp) {
-      font-size: 8em;
-    }
-    @media only screen and ($large-bp) {
-      font-size: 9.2em;
-    }
+  grid-gap: 1em;
+  align-content: center;
+  align-items: center;
+  margin-top: 194px;
+  padding-top: 0;
+  padding-bottom: 5%;
+  overflow: hidden;
+  @media only screen and ($medium-bp) {
+    margin-top: 110px;
   }
-
-  /* #heading {
-    visibility: hidden;
-  } */
-
-  .wrapper {
-    display: grid;
-    grid-gap: 1em;
-    align-content: center;
-    align-items: center;
-    margin-top: 194px;
-    padding-top: 0;
-    padding-bottom: 5%;
-    overflow: hidden;
-    @media only screen and ($medium-bp) {
-      margin-top: 110px;
-    }
-    overflow: visible;
-    @media only screen and ($small-bp) {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 3em;
-    }
+  @media only screen and ($small-bp) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
   }
-  #subtitle {
-    font-size: 1.9em;
-    color: white;
-    @media only screen and ($x-small-bp) {
-      font-size: 1.6em;
-    }
+}
+
+#subtitle {
+  font-size: 1.9em;
+  color: white;
+  @media only screen and ($x-small-bp) {
+    font-size: 1.6em;
   }
 }
 

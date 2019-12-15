@@ -19,6 +19,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/style-resources": "^1.0.0",
     "animate.css": "^3.7.2",
+    "contentful": "^7.10.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0"
   },

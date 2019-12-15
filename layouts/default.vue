@@ -1,15 +1,15 @@
 <template>
   <div>
-    <!-- <the-sticky-nav /> -->
     <the-header />
     <nuxt />
     <the-footer />
+    <the-sticky-nav />
   </div>
 </template>
 
 <script>
 import TheHeader from '~/components/TheHeader.vue';
-// import TheStickyNav from '~/components/TheStickyNav.vue';
+import TheStickyNav from '~/components/TheStickyNav.vue';
 import TheFooter from '~/components/TheFooter.vue';
 
 export default {
@@ -17,7 +17,7 @@ export default {
   components: {
     TheHeader,
     TheFooter,
-    // TheStickyNav,
+    TheStickyNav,
   },
 };
 </script>
@@ -103,7 +103,6 @@ button {
   border: none;
   padding: 0.5em;
   border-radius: 3px;
-  // text-transform: uppercase;
   font-family: $albertus;
   color: white;
   font-size: 0.9em;
@@ -127,5 +126,40 @@ main {
   margin: 0 auto;
   padding: 1em 2.5%;
   max-width: 1200px;
+}
+
+.hero {
+  display: grid;
+  background: $color-primary-light;
+  min-height: 100vh;
+
+  h1 {
+    @media only screen and ($small-bp) {
+      font-size: 6em;
+    }
+    @media only screen and ($medium-bp) {
+      font-size: 8em;
+    }
+    @media only screen and ($large-bp) {
+      font-size: 9.2em;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-gap: 1em;
+    align-content: center;
+    align-items: center;
+    margin-top: 194px;
+    padding-top: 0;
+    padding-bottom: 5%;
+    overflow: hidden;
+    @media only screen and ($medium-bp) {
+      margin-top: 110px;
+    }
+    @media only screen and ($small-bp) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
 }
 </style>

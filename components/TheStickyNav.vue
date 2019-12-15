@@ -1,11 +1,11 @@
 <template>
-  <header class="fixed-header">
+  <footer class="sticky-footer" :class="{ show: isScrolled }">
     <div class="wrapper">
-      <nuxt-link to="/" class="logo-fixed">
+      <nuxt-link to="/" class="logo">
         <img src="~/assets/img/DYS-logo-150.gif" alt="DYS logo" />
       </nuxt-link>
       <nav>
-        <ul class="fixed-nav">
+        <ul class="nav">
           <li>
             <nuxt-link to="/portfolio">Portfolio</nuxt-link>
           </li>
@@ -18,21 +18,52 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'TheStickyNav',
+  data() {
+    return {
+      isScrolled: false,
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+      // if (this.isScrolled) {
+      //   console.log('over');
+      // } else {
+      //   console.log('under');
+      // }
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.fixed-header {
-  position: fixed;
+.sticky-footer {
+  opacity: 0;
+  transform: translate3d(0, 70px, 0);
+  transition: 0.3s ease-in;
+  position: sticky;
   bottom: 0;
   width: 100%;
   z-index: 50;
   background: rgba($color: white, $alpha: 0.95);
   box-shadow: 1px 0 4px rgba($color: black, $alpha: 0.3);
+
+  &.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 
   img {
     display: block;
@@ -50,7 +81,7 @@ export default {};
   }
 }
 
-.logo-fixed {
+.logo {
   img {
     width: 50px;
     @media only screen and ($x-small-bp) {
@@ -59,7 +90,7 @@ export default {};
   }
 }
 
-.fixed-nav {
+.nav {
   @extend %nav;
 
   a {
