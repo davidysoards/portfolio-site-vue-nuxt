@@ -56,7 +56,7 @@
       <div class="wrapper">
         <menu-social-icons />
 
-        <p>&copy; 2018 DYS Multimedia LLC</p>
+        <p>&copy; {{ currentYear }} DYS Multimedia LLC</p>
       </div>
     </section>
   </footer>
@@ -68,6 +68,11 @@ import MenuSocialIcons from '~/components/MenuSocialIcons.vue';
 export default {
   name: 'TheFooter',
   components: { MenuSocialIcons },
+  computed: {
+    currentYear() {
+      return new Date().getFullYear();
+    },
+  },
 };
 </script>
 

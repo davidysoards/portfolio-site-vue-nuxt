@@ -7,8 +7,8 @@
         </div>
         <img
           :src="heroImage"
-          class="project-image animated rotateIn delay-5"
           :alt="heroAlt"
+          class="project-image animated rotateIn delay-5"
         />
 
         <arrow-double-down />
@@ -18,7 +18,7 @@
     <main id="scroll-down" class="projects">
       <div class="wrapper">
         <h2>{{ pageTitle }}</h2>
-        <div class="rich-text" v-html="richText"></div>
+        <div v-html="richText" class="rich-text"></div>
       </div>
 
       <div>

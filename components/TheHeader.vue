@@ -10,7 +10,8 @@
             <nuxt-link to="/about">About</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="#contact">Contact</nuxt-link>
+            <!-- using a tag because nuxt link only scroll 1 time -->
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
