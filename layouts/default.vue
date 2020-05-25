@@ -56,10 +56,13 @@ h3 {
   font-size: 1.2em;
   color: $color-primary-dark;
   @media only screen and ($small-bp) {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
-  @media only screen and ($medium-bp) {
-    font-size: 1.3em;
+  // can't target rich text from contentful with scoped css
+  .project-page & {
+    @media only screen and ($small-bp) {
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -70,9 +73,6 @@ h4 {
   color: $color-primary;
   @media only screen and ($small-bp) {
     font-size: 1.3em;
-  }
-  @media only screen and ($medium-bp) {
-    font-size: 1.2em;
   }
 }
 

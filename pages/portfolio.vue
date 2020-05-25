@@ -14,7 +14,6 @@
           src="~/assets/img/desk.svg"
           alt="illustration of desk with a laptop, external monitor and speakers"
         />
-
         <arrow-double-down />
       </div>
     </section>
@@ -22,23 +21,6 @@
     <main id="scroll-down" class="portfolio">
       <div class="wrapper">
         <h2>Portfolio</h2>
-        <section class="jump-to">
-          <p>Jump to:</p>
-          <div class="categories-list">
-            <nuxt-link to="#websites">
-              <button>Web &amp; UX</button>
-            </nuxt-link>
-            <nuxt-link to="#graphics">
-              <button>Graphics</button>
-            </nuxt-link>
-            <nuxt-link to="#animation">
-              <button>Animation</button>
-            </nuxt-link>
-            <nuxt-link to="#art-comics">
-              <button>Art &amp; Comics</button>
-            </nuxt-link>
-          </div>
-        </section>
       </div>
 
       <section id="websites">
@@ -56,34 +38,18 @@
 
       <section id="graphics">
         <div class="wrapper">
-          <h3 class="category-title">Graphics</h3>
+          <h3 class="category-title">Design &amp; Illusration</h3>
           <ul class="category-grid">
             <card-overlay
               v-for="project in graphicProjects"
               :key="project.sys.id"
               v-bind="project.fields"
             />
-          </ul>
-        </div>
-      </section>
-
-      <section id="animation">
-        <div class="wrapper">
-          <h3 class="category-title">Animation</h3>
-          <ul class="category-grid">
             <card-overlay
               v-for="project in gifProjects"
               :key="project.sys.id"
               v-bind="project.fields"
             />
-          </ul>
-        </div>
-      </section>
-
-      <section id="art-comics">
-        <div class="wrapper">
-          <h3 class="category-title">Art &amp; Comics</h3>
-          <ul class="category-grid">
             <card-overlay
               v-for="project in artProjects"
               :key="project.sys.id"
@@ -117,11 +83,6 @@ export default {
     CardFullWidth,
     CardOverlay,
     ArrowDoubleDown,
-  },
-  head() {
-    return {
-      title: 'David Soards | Portolio',
-    };
   },
   asyncData({ env }) {
     return Promise.all([
@@ -164,6 +125,11 @@ export default {
         }
       )
       .catch(console.error);
+  },
+  head() {
+    return {
+      title: 'David Soards | Portolio',
+    };
   },
 };
 </script>

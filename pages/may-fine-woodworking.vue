@@ -18,7 +18,8 @@
     <main id="scroll-down" class="projects">
       <div class="wrapper">
         <h2>{{ pageTitle }}</h2>
-        <div v-html="richText" class="rich-text"></div>
+        <!-- eslint-disable-next-line -->
+        <div class="rich-text" v-html="richText"></div>
       </div>
 
       <div>

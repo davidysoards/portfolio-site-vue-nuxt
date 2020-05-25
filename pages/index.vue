@@ -82,7 +82,7 @@
             </li>
 
             <li class="i-create-category">
-              <nuxt-link to="/portfolio#animation">
+              <nuxt-link to="/portfolio#graphics">
                 <img src="~/assets/img/3_walks.gif" alt="3 walk cycles" />
                 <h3>Animations</h3>
               </nuxt-link>
@@ -93,7 +93,7 @@
             </li>
 
             <li class="i-create-category">
-              <nuxt-link to="/portfolio#art-comics">
+              <nuxt-link to="/portfolio#graphics">
                 <img
                   src="~/assets/img/art-prints-thumb.jpg"
                   alt="several art poster prints"
