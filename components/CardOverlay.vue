@@ -1,17 +1,15 @@
 <template>
-  <a :href="fullSrc">
-    <li class="item">
-      <img :src="thumbSrc" alt="thumbnail.fields.description" />
-      <div class="item_overlay">
-        <button tabindex="-1">View →</button>
-        <div class="text-container">
-          <p>
-            {{ description }}
-          </p>
-        </div>
+  <li class="item">
+    <img :src="thumbSrc" :alt="thumbAlt" />
+    <div class="item_overlay">
+      <button tabindex="-1" @click="$emit('click')">View →</button>
+      <div class="text-container">
+        <p>
+          {{ description }}
+        </p>
       </div>
-    </li>
-  </a>
+    </div>
+  </li>
 </template>
 
 <script>
@@ -19,15 +17,14 @@ export default {
   name: 'CardOverlay',
   props: {
     description: { type: String, default: '' },
-    fullGraphic: { type: Object, default: () => {} },
     thumbnail: { type: Object, default: () => {} },
   },
   computed: {
-    fullSrc() {
-      return `https:${this.fullGraphic.fields.file.url}`;
-    },
     thumbSrc() {
-      return `https:${this.thumbnail.fields.file.url}`;
+      return this.thumbnail.fields.file.url;
+    },
+    thumbAlt() {
+      return this.thumbnail.fields.description;
     },
   },
 };

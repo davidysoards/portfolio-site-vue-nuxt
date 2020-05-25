@@ -1,5 +1,7 @@
 <template>
   <div class="portfolio-page">
+    <CoolLightBox :items="items" :index="index" @close="index = null" />
+
     <section class="hero">
       <div class="wrapper hero-grid">
         <div class="heading">
@@ -41,19 +43,10 @@
           <h3 class="category-title">Design &amp; Illusration</h3>
           <ul class="category-grid">
             <card-overlay
-              v-for="project in graphicProjects"
+              v-for="(project, projectIndex) in graphicProjects"
               :key="project.sys.id"
               v-bind="project.fields"
-            />
-            <card-overlay
-              v-for="project in gifProjects"
-              :key="project.sys.id"
-              v-bind="project.fields"
-            />
-            <card-overlay
-              v-for="project in artProjects"
-              :key="project.sys.id"
-              v-bind="project.fields"
+              @click="index = projectIndex"
             />
           </ul>
         </div>
@@ -69,11 +62,14 @@
 </template>
 
 <script>
+import CoolLightBox from 'vue-cool-lightbox';
 import { createClient } from '../plugins/contentful';
 
 import CardFullWidth from '~/components/CardFullWidth.vue';
 import CardOverlay from '~/components/CardOverlay.vue';
 import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
+
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
 
 const client = createClient();
 
@@ -83,6 +79,7 @@ export default {
     CardFullWidth,
     CardOverlay,
     ArrowDoubleDown,
+    CoolLightBox,
   },
   asyncData({ env }) {
     return Promise.all([
@@ -118,13 +115,30 @@ export default {
           // in the template
           return {
             webProjects: projectsWeb.items,
-            graphicProjects: projectsGraphics.items,
-            gifProjects: projectsAnimatedGifs.items,
-            artProjects: projectsArt.items,
+            graphicProjects: [
+              ...projectsGraphics.items,
+              ...projectsAnimatedGifs.items,
+              ...projectsArt.items,
+            ],
           };
         }
       )
       .catch(console.error);
+  },
+  data() {
+    return {
+      index: null,
+    };
+  },
+  computed: {
+    items() {
+      return this.graphicProjects.map(project => ({
+        description: project.fields.description,
+        src: project.fields.fullGraphic.fields.file.url,
+        // title: project.fields.title,
+        // thumb: project.fields.thumbnail.fields.file.url,
+      }));
+    },
   },
   head() {
     return {
