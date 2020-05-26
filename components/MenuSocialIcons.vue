@@ -1,30 +1,55 @@
 <template>
   <ul class="social-icons">
     <li>
-      <a href="https://github.com/davidysoards" target="_blank">
+      <a
+        href="https://github.com/davidysoards"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="github"
+      >
         <font-awesome-icon :icon="['fab', 'github']" />
       </a>
     </li>
 
     <li>
-      <a href="https://twitter.com/ninjasoards" target="_blank">
+      <a
+        href="https://twitter.com/ninjasoards"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="twitter"
+      >
         <font-awesome-icon :icon="['fab', 'twitter']" />
       </a>
     </li>
 
     <li>
-      <a href="https://www.instagram.com/ninjasoards/" target="_blank">
+      <a
+        href="https://www.instagram.com/ninjasoards/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="instagram"
+      >
         <font-awesome-icon :icon="['fab', 'instagram']" />
       </a>
     </li>
 
     <li>
-      <a href="https://www.linkedin.com/in/davidysoards/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/davidysoards/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="linkedin"
+      >
         <font-awesome-icon :icon="['fab', 'linkedin-in']" />
       </a>
     </li>
     <li>
-      <a href="https://www.facebook.com/ninjasoards" target="_blank">
+      <a
+        href="https://www.facebook.com/ninjasoards"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="facebook"
+      >
         <font-awesome-icon :icon="['fab', 'facebook-f']" />
       </a>
     </li>

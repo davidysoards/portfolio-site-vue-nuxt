@@ -13,7 +13,7 @@
           {{ linkDisplay }}
           <font-awesome-icon :icon="['fas', 'angle-double-right']" />
         </nuxt-link>
-        <a v-else :href="link" target="_blank">
+        <a v-else :href="link" target="_blank" rel="noopener noreferrer">
           {{ linkDisplay }}
           <font-awesome-icon :icon="['fas', 'angle-double-right']" />
         </a>

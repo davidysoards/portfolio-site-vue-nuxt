@@ -1,5 +1,9 @@
 <template>
-  <a v-scroll-to="'#scroll-down'" class="arrow animated fadeInUp delay-1s">
+  <a
+    v-scroll-to="'#scroll-down'"
+    class="arrow animated fadeInUp delay-1s"
+    aria-label="skip to content"
+  >
     <img
       src="~/assets/img/double-down.svg"
       alt="double down arrow"
