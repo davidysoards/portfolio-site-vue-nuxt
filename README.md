@@ -1,22 +1,26 @@
-# davidysoards
+# davidysoards.com
 
-> David&#39;s Bomb Ass Portfolio
+> David&#39;s Bomb Ass Design Portfolio
+
+I updated my design portfolio to a static generated site with Vue, Nuxt, Contentful and Netlify.
+
+Uses some custom generated animate.css keyframes, vue-scrollto, vue-cool-lightbox, and vue-fontawesome.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ yarn install
+$ npm run install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ npm run dev
 
 # build for production and launch server
-$ yarn build
-$ yarn start
+$ npm run build
+$ npm run start
 
 # generate static project
-$ yarn generate
+$ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
