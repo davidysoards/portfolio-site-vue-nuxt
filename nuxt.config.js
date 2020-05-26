@@ -27,9 +27,8 @@ export default {
    */
   css: [
     'normalize.css',
-    'animate.css',
-    '@/assets/scss/global.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
+    '@/assets/scss/global.scss',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -67,6 +66,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    extractCSS: true,
     extend(config, ctx) {},
   },
   env: {
