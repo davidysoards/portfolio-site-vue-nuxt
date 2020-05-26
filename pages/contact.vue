@@ -10,7 +10,6 @@
         netlify-honeypot="bot-field"
         action="/thanks"
         data-netlify="true"
-        @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="contactme" />
         <label>
