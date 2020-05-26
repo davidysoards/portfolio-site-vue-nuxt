@@ -21,10 +21,7 @@
           <h2>I'm a ...</h2>
           <ul class="i-am-skills-list">
             <li class="skill designer">
-              <img
-                src="~/assets/img/designer-small.gif"
-                alt="designer icon drawing a text box"
-              />
+              <img src="~/assets/img/designer-small.gif" alt="designer icon drawing a text box" />
               <h3>Designer</h3>
             </li>
 
@@ -60,24 +57,19 @@
                 <h3>Websites &amp; Apps</h3>
               </nuxt-link>
               <p>
-                I enjoy helping people promote &amp; operate their businesses
-                more efficiently. At the same time I always advocate for the
-                customer/user.
+                I enjoy helping people promote &amp; operate their businesses more efficiently. At
+                the same time I always advocate for the customer/user.
               </p>
             </li>
 
             <li class="i-create-category">
               <nuxt-link to="/portfolio#graphics">
-                <img
-                  src="~/assets/img/Garden-Variety-thumb.jpg"
-                  alt="flyer for photo contest"
-                />
+                <img src="~/assets/img/Garden-Variety-thumb.jpg" alt="flyer for photo contest" />
                 <h3>Graphics</h3>
               </nuxt-link>
               <p>
-                I create a variety of graphics for the web &amp; print,
-                including logos, icons, business cards &amp; promotional
-                materials.
+                I create a variety of graphics for the web &amp; print, including logos, icons,
+                business cards &amp; promotional materials.
               </p>
             </li>
 
@@ -87,34 +79,27 @@
                 <h3>Animations</h3>
               </nuxt-link>
               <p>
-                I love adding motion to my designs using the principles of
-                animation with After Effects or JavaScript &amp; CSS.
+                I love adding motion to my designs using the principles of animation with After
+                Effects or JavaScript &amp; CSS.
               </p>
             </li>
 
             <li class="i-create-category">
               <nuxt-link to="/portfolio#graphics">
-                <img
-                  src="~/assets/img/art-prints-thumb.jpg"
-                  alt="several art poster prints"
-                />
+                <img src="~/assets/img/art-prints-thumb.jpg" alt="several art poster prints" />
                 <h3>Art &amp; Comics</h3>
               </nuxt-link>
               <p>
-                I specialize in ink &amp; watercolor paintings and sequential
-                art that combines both traditional &amp; digital techniques.
+                I specialize in ink &amp; watercolor paintings and sequential art that combines both
+                traditional &amp; digital techniques.
               </p>
             </li>
           </ul>
 
-          <div class="portfolio-button-container">
-            <nuxt-link to="/portfolio">
-              <button>
-                See My Portfolio
-                <i class="fas fa-angle-double-right"></i>
-              </button>
-            </nuxt-link>
-          </div>
+          <nuxt-link to="/portfolio" class="button">
+            See My Portfolio
+            <i class="fas fa-angle-double-right"></i>
+          </nuxt-link>
         </div>
       </section>
 
@@ -129,10 +114,9 @@
               />
               <h3>Research &amp; Inventory</h3>
               <p>
-                Step One is to understand my client and their customers. That
-                means asking questions, listening and identifying needs. Once we
-                have established goals for the project, I create an inventory of
-                the necessary content.
+                Step One is to understand my client and their customers. That means asking
+                questions, listening and identifying needs. Once we have established goals for the
+                project, I create an inventory of the necessary content.
               </p>
             </li>
             <li>
@@ -142,10 +126,9 @@
               />
               <h3>Sketch &amp; Ideate</h3>
               <p>
-                I'm a traditionalist. I sketch out my ideas using pencil or pen
-                and paper. Sketching on paper allows me to concentrate on the
-                structure and content of what I am creating without getting
-                distracted by typography and color choices.
+                I'm a traditionalist. I sketch out my ideas using pencil or pen and paper. Sketching
+                on paper allows me to concentrate on the structure and content of what I am creating
+                without getting distracted by typography and color choices.
               </p>
             </li>
             <li>
@@ -155,21 +138,16 @@
               />
               <h3>Test &amp; Iterate</h3>
               <p>
-                Do as little as is necessary in order to validate your ideas.
-                Snapshots of a wireframe sketch and a few post-it notes can be
-                made into a prototype and tested. I take notes, evaluate the
-                results and make changes as needed.
+                Do as little as is necessary in order to validate your ideas. Snapshots of a
+                wireframe sketch and a few post-it notes can be made into a prototype and tested. I
+                take notes, evaluate the results and make changes as needed.
               </p>
             </li>
           </ul>
-          <div class="process-button-container">
-            <nuxt-link to="/portfolio">
-              <button>
-                View My Work
-                <i class="fas fa-angle-double-right"></i>
-              </button>
-            </nuxt-link>
-          </div>
+          <nuxt-link to="/portfolio" class="button">
+            View My Work
+            <i class="fas fa-angle-double-right"></i>
+          </nuxt-link>
         </div>
       </section>
     </main>
@@ -240,7 +218,12 @@ export default {
       grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
   }
+  .button {
+    margin-bottom: 1em;
+    display: inline-block;
+  }
 }
+
 .i-create-category {
   display: grid;
   justify-items: center;
@@ -254,8 +237,7 @@ export default {
         opacity: 0.7;
       }
     }
-
-    h3 {
+    ba h3 {
       transition: color 0.2s linear;
       &:hover {
         color: $color-secondary;
@@ -266,6 +248,7 @@ export default {
 
 // =process ==========
 .process {
+  margin-bottom: 2rem;
   ul {
     display: grid;
     grid-gap: 1em;
@@ -284,8 +267,9 @@ export default {
       }
     }
   }
-  .process-button-container {
+  .button {
     margin-top: 1em;
+    display: inline-block;
   }
 }
 </style>

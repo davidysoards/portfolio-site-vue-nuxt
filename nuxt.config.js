@@ -49,6 +49,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    'vue-scrollto/nuxt',
   ],
   /*
    ** Axios module configuration

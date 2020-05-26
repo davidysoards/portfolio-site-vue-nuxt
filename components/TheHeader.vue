@@ -10,8 +10,7 @@
             <nuxt-link to="/about">About</nuxt-link>
           </li>
           <li>
-            <!-- using a tag because nuxt link only scroll 1 time -->
-            <a href="#contact">Contact</a>
+            <nuxt-link to="/contact">Contact</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -63,6 +62,7 @@ nav {
 .main-nav {
   @extend %nav;
   a {
+    cursor: pointer;
     color: white;
     @media only screen and ($small-bp) {
       font-size: 1.2em;

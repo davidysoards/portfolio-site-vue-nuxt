@@ -1,5 +1,5 @@
 <template>
-  <footer :class="{ show: isScrolled }" class="sticky-footer">
+  <div :class="{ show: isScrolled }" class="sticky-footer">
     <div class="wrapper">
       <nuxt-link to="/" class="logo">
         <img src="~/assets/img/DYS-logo-150.gif" alt="DYS logo" />
@@ -18,7 +18,7 @@
         </ul>
       </nav>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>

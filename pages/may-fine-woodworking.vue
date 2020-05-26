@@ -5,11 +5,7 @@
         <div class="hero-heading">
           <h1 class="animated fadeInLeftBig">Case Study</h1>
         </div>
-        <img
-          :src="heroImage"
-          :alt="heroAlt"
-          class="project-image animated rotateIn delay-5"
-        />
+        <img :src="heroImage" :alt="heroAlt" class="project-image animated rotateIn delay-5" />
 
         <arrow-double-down />
       </div>
@@ -22,9 +18,9 @@
         <div class="rich-text" v-html="richText"></div>
       </div>
 
-      <div>
-        <a href="#scroll-down">
-          <button><i class="fas fa-angle-double-up"></i> Back to Top</button>
+      <div class="back-to-top">
+        <a v-scroll-to="'#scroll-down'" class="button">
+          <i class="fas fa-angle-double-up"></i> Back to Top
         </a>
       </div>
     </main>
@@ -61,10 +57,7 @@ export default {
           heroImage: entry.fields.heroImage.fields.file.url,
           heroAlt: entry.fields.heroImage.fields.description,
           pageTitle: entry.fields.pageTitle,
-          richText: documentToHtmlString(
-            entry.fields.pageBody,
-            richTextRenderOptions
-          ),
+          richText: documentToHtmlString(entry.fields.pageBody, richTextRenderOptions),
         };
       })
       .catch(console.error);
@@ -129,5 +122,10 @@ h2 {
   text-align: left;
   font-size: 1.1em;
   line-height: 1.5;
+}
+
+.back-to-top {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 </style>

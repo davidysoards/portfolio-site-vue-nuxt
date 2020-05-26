@@ -26,48 +26,42 @@
         <h2>About</h2>
 
         <p>
-          Hello. I’m David Soards and I have a desire to create. I’m also
-          extremely curious about how things are made, and I like things that
-          are made well. These traits (or curses) have manifest themselves in
-          numerous ways over the years through various creative endeavors.
-          Today, I work as a Front-End Developer and UX Designer. I focus on
-          creating products that are both visually appealing and also offer the
-          best possible User Experience. I'm a big fan of Comics and Animation.
-          I love to incorporate Drawing and Storytelling into my Design work
-          whenever possible.
+          Hello. I’m David Soards and I have a desire to create. I’m also extremely curious about
+          how things are made, and I like things that are made well. These traits (or curses) have
+          manifest themselves in numerous ways over the years through various creative endeavors.
+          Today, I work as a Front-End Developer and UX Designer. I focus on creating products that
+          are both visually appealing and also offer the best possible User Experience. I'm a big
+          fan of Comics and Animation. I love to incorporate Drawing and Storytelling into my Design
+          work whenever possible.
         </p>
 
         <p>
-          User Experience Design is exciting to me because it gives me the
-          opportunity to combine my love of visual design and technology with
-          the solid business principles I developed in college and my natural
-          entrepreneurial instincts. My goal is to design quality products that
-          will enhance people’s lives, to develop websites and applications that
-          people are excited to show to their friends and family, and to create
-          experiences that users remember and want to experience again.
+          User Experience Design is exciting to me because it gives me the opportunity to combine my
+          love of visual design and technology with the solid business principles I developed in
+          college and my natural entrepreneurial instincts. My goal is to design quality products
+          that will enhance people’s lives, to develop websites and applications that people are
+          excited to show to their friends and family, and to create experiences that users remember
+          and want to experience again.
         </p>
 
         <p>
-          I’m very interested in how the principles of animation and how motion
-          design can be used to create better User Experiences on the web. I
-          believe motion for UX is an area that is going to continue to grow and
-          receive even more interest in the very near future. I get excited
-          about anything related to animation on the web using SVG, JavaScript
-          and CSS. The animations at the top of each page of this site were
-          created with Greensock and CSS. The GIFs and videos were created in
-          After Effects.
+          I’m very interested in how the principles of animation and how motion design can be used
+          to create better User Experiences on the web. I believe motion for UX is an area that is
+          going to continue to grow and receive even more interest in the very near future. I get
+          excited about anything related to animation on the web using SVG, JavaScript and CSS. The
+          animations at the top of each page of this site were created with Greensock and CSS. The
+          GIFs and videos were created in After Effects.
         </p>
 
         <p>
-          Continuing education is extremely important to me, and I’m always
-          looking to learn more and new things. Having completed two cohorts at
-          Code Louisville myself, I’m now very happy to be giving back and
-          working as a mentor in both the Front-End and JavaScript classes.
+          Continuing education is extremely important to me, and I’m always looking to learn more
+          and new things. Having completed two cohorts at Code Louisville myself, I’m now very happy
+          to be giving back and working as a mentor in both the Front-End and JavaScript classes.
         </p>
 
         <p>
-          Please contact me via social media or email if you are interested in
-          the possibility of working together.
+          Please contact me via social media or email if you are interested in the possibility of
+          working together.
         </p>
 
         <p>Thanks for reading!</p>

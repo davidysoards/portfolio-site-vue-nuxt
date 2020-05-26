@@ -92,7 +92,8 @@ a {
   transition: color 0.2s linear, opacity 0.2s linear;
 }
 
-button {
+button,
+.button {
   background-image: linear-gradient(
     to bottom,
     darken($color-secondary, 7%) 0%,
@@ -108,6 +109,7 @@ button {
   font-size: 0.9em;
   box-shadow: 0px 0px 2px rgba($color: black, $alpha: 0.15);
   transition: 0.3s;
+  cursor: pointer;
   &:hover {
     background-position: bottom;
   }

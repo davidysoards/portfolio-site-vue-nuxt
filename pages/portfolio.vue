@@ -23,6 +23,12 @@
     <main id="scroll-down" class="portfolio">
       <div class="wrapper">
         <h2>Portfolio</h2>
+        <section class="jump-to">
+          <p>Scroll to:</p>
+          <div class="categories-list">
+            <a v-scroll-to="'#graphics'" class="button">Design &amp; Illustration</a>
+          </div>
+        </section>
       </div>
 
       <section id="websites">
@@ -52,9 +58,9 @@
         </div>
       </section>
 
-      <div>
-        <a href="#scroll-down">
-          <button><i class="fas fa-angle-double-up"></i> Back to Top</button>
+      <div class="back-to-top">
+        <a v-scroll-to="'#scroll-down'" class="button">
+          <i class="fas fa-angle-double-up"></i> Back to Top
         </a>
       </div>
     </main>
@@ -104,25 +110,18 @@ export default {
         order: 'fields.order',
       }),
     ])
-      .then(
-        ([
-          projectsWeb,
-          projectsGraphics,
-          projectsAnimatedGifs,
-          projectsArt,
-        ]) => {
-          // return data that should be available
-          // in the template
-          return {
-            webProjects: projectsWeb.items,
-            graphicProjects: [
-              ...projectsGraphics.items,
-              ...projectsAnimatedGifs.items,
-              ...projectsArt.items,
-            ],
-          };
-        }
-      )
+      .then(([projectsWeb, projectsGraphics, projectsAnimatedGifs, projectsArt]) => {
+        // return data that should be available
+        // in the template
+        return {
+          webProjects: projectsWeb.items,
+          graphicProjects: [
+            ...projectsGraphics.items,
+            ...projectsAnimatedGifs.items,
+            ...projectsArt.items,
+          ],
+        };
+      })
       .catch(console.error);
   },
   data() {
@@ -243,9 +242,8 @@ export default {
   }
 }
 
-// =Animation
-#animation {
-  background: $color-primary-lighter;
-  padding-bottom: 2em;
+.back-to-top {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 </style>
