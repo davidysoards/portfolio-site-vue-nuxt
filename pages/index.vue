@@ -20,17 +20,17 @@
         <div class="wrapper">
           <h2>I'm a ...</h2>
           <ul class="i-am-skills-list">
-            <li class="skill designer">
-              <img src="~/assets/img/designer-small.gif" alt="designer icon drawing a text box" />
-              <h3>Designer</h3>
-            </li>
-
             <li class="skill developer">
               <img
                 src="~/assets/img/developer-small.gif"
                 alt="developer icon text editor on a laptop"
               />
               <h3>Developer</h3>
+            </li>
+
+            <li class="skill designer">
+              <img src="~/assets/img/designer-small.gif" alt="designer icon drawing a text box" />
+              <h3>Designer</h3>
             </li>
 
             <li class="skill illustrator">
