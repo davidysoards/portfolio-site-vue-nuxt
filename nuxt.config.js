@@ -1,7 +1,8 @@
 import config from './.contentful.json';
 
 export default {
-  mode: 'universal',
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -71,6 +72,10 @@ export default {
      */
     extractCSS: true,
     extend(config, ctx) {},
+    babel: {
+      // silence message in console - known nuxt bug - https://github.com/nuxt/nuxt.js/pull/9631
+      plugins: [['@babel/plugin-proposal-private-property-in-object', { loose: true }]],
+    },
   },
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
