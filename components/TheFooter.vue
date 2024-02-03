@@ -3,7 +3,7 @@
     <section class="copyright">
       <div class="wrapper">
         <menu-social-icons />
-        <p>&copy; {{ currentYear }} DYS Multimedia LLC</p>
+        <p>&copy; {{ currentYear }} David Soards</p>
       </div>
     </section>
   </footer>

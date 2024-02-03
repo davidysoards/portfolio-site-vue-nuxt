@@ -43,7 +43,7 @@
         <font-awesome-icon :icon="['fab', 'linkedin-in']" />
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a
         href="https://www.facebook.com/ninjasoards"
         target="_blank"
@@ -52,7 +52,7 @@
       >
         <font-awesome-icon :icon="['fab', 'facebook-f']" />
       </a>
-    </li>
+    </li> -->
   </ul>
 </template>
 
