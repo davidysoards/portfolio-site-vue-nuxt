@@ -11,6 +11,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    error: {
+      type: Object,
+      default: () => {},
+    },
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 .flex-container {
   min-height: 100vh;
@@ -29,14 +40,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  props: {
-    error: {
-      type: Object,
-      default: () => {},
-    },
-  },
-};
-</script>

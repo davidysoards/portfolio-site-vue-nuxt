@@ -88,61 +88,64 @@ export default {
     CoolLightBox,
   },
   asyncData({ env }) {
-    return Promise.all([
-      // fetch all web projects
-      client.getEntries({
-        content_type: 'projectsWeb',
-        order: 'fields.order',
-      }),
-      // fetch all graphics projects
-      client.getEntries({
-        content_type: 'projectsGraphics',
-        order: 'fields.order',
-      }),
-      // fetch all gif projects
-      client.getEntries({
-        content_type: 'projectsAnimatedGifs',
-        order: 'fields.order',
-      }),
-      // fetch all art and comics projects
-      client.getEntries({
-        content_type: 'projectsArt',
-        order: 'fields.order',
-      }),
-    ])
-      .then(([projectsWeb, projectsGraphics, projectsAnimatedGifs, projectsArt]) => {
-        // return data that should be available
-        // in the template
-        return {
-          webProjects: projectsWeb.items,
-          graphicProjects: [
-            ...projectsGraphics.items,
-            ...projectsAnimatedGifs.items,
-            ...projectsArt.items,
-          ],
-        };
-      })
-      .catch(console.error);
+    return (
+      Promise.all([
+        // fetch all web projects
+        client.getEntries({
+          content_type: 'projectsWeb',
+          order: 'fields.order',
+        }),
+        // fetch all graphics projects
+        client.getEntries({
+          content_type: 'projectsGraphics',
+          order: 'fields.order',
+        }),
+        // fetch all gif projects
+        client.getEntries({
+          content_type: 'projectsAnimatedGifs',
+          order: 'fields.order',
+        }),
+        // fetch all art and comics projects
+        client.getEntries({
+          content_type: 'projectsArt',
+          order: 'fields.order',
+        }),
+      ])
+        .then(([projectsWeb, projectsGraphics, projectsAnimatedGifs, projectsArt]) => {
+          // return data that should be available
+          // in the template
+          return {
+            webProjects: projectsWeb.items,
+            graphicProjects: [
+              ...projectsGraphics.items,
+              ...projectsAnimatedGifs.items,
+              ...projectsArt.items,
+            ],
+          };
+        })
+        // eslint-disable-next-line
+        .catch(console.error)
+    );
   },
   data() {
     return {
       index: null,
     };
   },
+  head() {
+    return {
+      title: 'David Soards | Portolio',
+    };
+  },
   computed: {
     items() {
-      return this.graphicProjects.map(project => ({
+      return this.graphicProjects.map((project) => ({
         description: project.fields.description,
         src: project.fields.fullGraphic.fields.file.url,
         // title: project.fields.title,
         // thumb: project.fields.thumbnail.fields.file.url,
       }));
     },
-  },
-  head() {
-    return {
-      title: 'David Soards | Portolio',
-    };
   },
 };
 </script>

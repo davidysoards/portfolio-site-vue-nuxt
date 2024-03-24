@@ -35,7 +35,7 @@ import ArrowDoubleDown from '~/components/ArrowDoubleDown.vue';
 const client = createClient();
 const richTextRenderOptions = {
   renderNode: {
-    'embedded-asset-block': node =>
+    'embedded-asset-block': (node) =>
       `<figure style="margin-bottom:2.6rem; text-align:center;">
         <img src="${node.data.target.fields.file.url}" alt="" />
         <figcaption style="font-size:1rem;">${node.data.target.fields.description}</figcaption>
@@ -49,18 +49,21 @@ export default {
     ArrowDoubleDown,
   },
   asyncData({ env }) {
-    return client
-      .getEntry('7jMnJrE8kLcYXGJjm9xcSJ')
-      .then(entry => {
-        // console.log(entry.fields);
-        return {
-          heroImage: entry.fields.heroImage.fields.file.url,
-          heroAlt: entry.fields.heroImage.fields.description,
-          pageTitle: entry.fields.pageTitle,
-          richText: documentToHtmlString(entry.fields.pageBody, richTextRenderOptions),
-        };
-      })
-      .catch(console.error);
+    return (
+      client
+        .getEntry('7jMnJrE8kLcYXGJjm9xcSJ')
+        .then((entry) => {
+          // console.log(entry.fields);
+          return {
+            heroImage: entry.fields.heroImage.fields.file.url,
+            heroAlt: entry.fields.heroImage.fields.description,
+            pageTitle: entry.fields.pageTitle,
+            richText: documentToHtmlString(entry.fields.pageBody, richTextRenderOptions),
+          };
+        })
+        // eslint-disable-next-line
+        .catch(console.error)
+    );
   },
 };
 </script>
