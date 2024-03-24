@@ -7,6 +7,9 @@
             <nuxt-link to="/portfolio">Portfolio</nuxt-link>
           </li>
           <li>
+            <a href="https://blog.soards.me/">Blog</a>
+          </li>
+          <li>
             <nuxt-link to="/about">About</nuxt-link>
           </li>
           <li>
@@ -49,7 +52,8 @@ nav {
   z-index: 100;
   .wrapper {
     display: grid;
-    grid-gap: 1em;
+    row-gap: 1em;
+    column-gap: 1.5em;
     max-width: none;
     @media only screen and ($medium-bp) {
       display: flex;
@@ -68,7 +72,7 @@ nav {
       font-size: 1.2em;
     }
     @media only screen and ($medium-bp) {
-      font-size: 1em;
+      font-size: 1.1em;
     }
     @media only screen and ($large-bp) {
       font-size: 1.3em;
@@ -77,7 +81,7 @@ nav {
 }
 
 .logo {
-  @media only screen and ($large-bp) {
+  @media only screen and ($medium-bp) {
     order: -1;
   }
   img {
@@ -89,7 +93,7 @@ nav {
 }
 
 .socials-menu {
-  @media only screen and ($large-bp) {
+  @media only screen and ($medium-bp) {
     margin-left: auto;
   }
 }

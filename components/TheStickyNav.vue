@@ -10,6 +10,9 @@
             <nuxt-link to="/portfolio">Portfolio</nuxt-link>
           </li>
           <li>
+            <a href="https://blog.soards.me/">Blog</a>
+          </li>
+          <li>
             <nuxt-link to="/about">About</nuxt-link>
           </li>
           <li>
