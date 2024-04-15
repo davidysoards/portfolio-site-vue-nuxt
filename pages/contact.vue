@@ -63,6 +63,7 @@ export default {
   },
   methods: {
     async handleSubmit(e) {
+      const errorMessage = 'Uh-oh! There was a problem submitting your form.';
       try {
         const data = new FormData(e.target);
         const res = await fetch('https://formspree.io/f/mrgnovqn', {
@@ -81,14 +82,14 @@ export default {
             if (Object.hasOwn(data, 'errors')) {
               this.status = data.errors.map((error) => error.message).join(', ');
             } else {
-              this.status = 'Oops! There was a problem submitting your form';
+              this.status = errorMessage;
             }
           });
         }
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
-        this.status = 'Oops! There was a problem submitting your form';
+        this.status = errorMessage;
       }
     },
   },
