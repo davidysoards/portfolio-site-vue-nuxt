@@ -2,16 +2,14 @@
   <main id="contact">
     <div class="wrapper">
       <h2>Holler At Your Boy</h2>
-
+      <p v-if="status" class="contact-status">{{ status }}</p>
       <form
+        v-else
+        ref="contactForm"
         name="contactme"
         class="contact-form"
-        method="post"
-        netlify-honeypot="bot-field"
-        action="/thanks"
-        data-netlify="true"
+        @submit.prevent="handleSubmit"
       >
-        <input type="hidden" name="form-name" value="contactme" />
         <label>
           Name
           <input
@@ -47,7 +45,7 @@
           ></textarea>
         </label>
         <div class="hidden">
-          <label>Don’t fill this out: <input name="bot-field"/></label>
+          <label>Don't fill this out: <input name="_gotcha" /></label>
         </div>
         <button type="submit">Send Message</button>
       </form>
@@ -56,7 +54,45 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'Contact',
+  data() {
+    return {
+      status: '',
+    };
+  },
+  methods: {
+    async handleSubmit(e) {
+      try {
+        const data = new FormData(e.target);
+        const res = await fetch('https://formspree.io/f/mrgnovqn', {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          this.status = "Thanks! I'll get back to you soon.";
+          this.$refs.contactForm.reset();
+          setTimeout(() => {
+            this.status = '';
+          }, 5000);
+        } else {
+          res.json().then((data) => {
+            if (Object.hasOwn(data, 'errors')) {
+              this.status = data.errors.map((error) => error.message).join(', ');
+            } else {
+              this.status = 'Oops! There was a problem submitting your form';
+            }
+          });
+        }
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(err);
+        this.status = 'Oops! There was a problem submitting your form';
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -134,5 +170,9 @@ main {
 
 .hidden {
   display: none;
+}
+
+.contact-status {
+  font-size: 1.75rem;
 }
 </style>
