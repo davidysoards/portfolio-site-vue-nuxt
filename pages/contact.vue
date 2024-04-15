@@ -39,6 +39,7 @@
           <textarea
             id="comment"
             name="message"
+            required
             class="contact-input"
             placeholder="🖊️"
             aria-label="message"
@@ -78,13 +79,12 @@ export default {
             this.status = '';
           }, 5000);
         } else {
-          res.json().then((data) => {
-            if (Object.hasOwn(data, 'errors')) {
-              this.status = data.errors.map((error) => error.message).join(', ');
-            } else {
-              this.status = errorMessage;
-            }
-          });
+          const json = await res.json();
+          if (Object.hasOwn(json, 'errors')) {
+            this.status = json.errors.map((error) => error.message).join(', ');
+          } else {
+            this.status = errorMessage;
+          }
         }
       } catch (err) {
         // eslint-disable-next-line no-console
