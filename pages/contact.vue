@@ -18,7 +18,6 @@
             type="text"
             class="contact-input"
             placeholder="📛"
-            aria-label="name"
             required
           />
         </label>
@@ -28,21 +27,19 @@
             id="email"
             name="email"
             type="email"
-            required
             class="contact-input"
             placeholder="✉️"
-            aria-label="email"
+            required
           />
         </label>
         <label>
           Message
           <textarea
-            id="comment"
+            id="message"
             name="message"
-            required
             class="contact-input"
             placeholder="🖊️"
-            aria-label="message"
+            required
           ></textarea>
         </label>
         <label class="hidden">Don't fill this out: <input name="_gotcha" /></label>
