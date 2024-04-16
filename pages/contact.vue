@@ -45,9 +45,7 @@
             aria-label="message"
           ></textarea>
         </label>
-        <div class="hidden">
-          <label>Don't fill this out: <input name="_gotcha" /></label>
-        </div>
+        <label class="hidden">Don't fill this out: <input name="_gotcha" /></label>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -64,7 +62,6 @@ export default {
   },
   methods: {
     async handleSubmit(e) {
-      const errorMessage = 'Uh-oh! There was a problem submitting your form.';
       try {
         const data = new FormData(e.target);
         const res = await fetch('https://formspree.io/f/mrgnovqn', {
@@ -81,15 +78,16 @@ export default {
         } else {
           const json = await res.json();
           if (Object.hasOwn(json, 'errors')) {
-            this.status = json.errors.map((error) => error.message).join(', ');
+            const errors = json.errors.map((error) => error.message).join(', ');
+            throw new Error(errors);
           } else {
-            this.status = errorMessage;
+            throw new Error('Uh-oh! There was a problem submitting your form.');
           }
         }
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
-        this.status = errorMessage;
+        this.status = err.message;
       }
     },
   },
